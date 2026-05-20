@@ -91,9 +91,13 @@ export default function FeaturedTech() {
               }`}
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#131d30]/80 border border-[#1e2d47] group-hover:border-[#00ff87]/25 transition-colors">
+             {
+              /**
+               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#131d30]/80 border border-[#1e2d47] group-hover:border-[#00ff87]/25 transition-colors">
                 <TechLogo item={item} />
               </div>
+               */
+             } 
               <div className="text-center">
                 <p className="font-karla text-sm font-semibold text-white leading-tight">
                   {item.name}
