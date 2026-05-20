@@ -44,14 +44,14 @@ export default function About() {
   }, []);
 
   return (
-    <section id="sobre-mi" ref={ref} className="relative py-24">
+    <section id="sobre-mi" ref={ref} className="relative py-24 overflow-hidden w-full max-w-[100vw]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1e2d47] to-transparent" />
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: text */}
           <div
-            className={`transition-all duration-700 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
+            className={`transition-all duration-700 ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-y-4"}`}
           >
             <p className="text-[#00ff87] font-bebas tracking-widest text-sm mb-2">
               SOBRE MÍ

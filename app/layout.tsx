@@ -14,6 +14,12 @@ const karla = Karla({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   title: "Lucas Mansilla | React Native Developer",
   description:
@@ -44,7 +50,7 @@ export default function RootLayout({
       lang="es"
       className={`${bebasNeue.variable} ${karla.variable} h-full`}
     >
-      <body className="min-h-full bg-[#060810] text-white antialiased font-karla">
+      <body className="min-h-full w-full overflow-x-hidden bg-[#060810] text-white antialiased font-karla">
         {children}
       </body>
     </html>

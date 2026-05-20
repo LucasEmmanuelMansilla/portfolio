@@ -49,7 +49,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden w-full max-w-[100vw]">
       {/* Radial glow background */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -59,15 +59,17 @@ export default function Hero() {
         }}
       />
 
-      {/* Decorative large text behind */}
+      {/* Decorative large text behind — clipped to avoid horizontal scroll */}
       <div
         aria-hidden
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[20vw] leading-none text-white/[0.02] select-none pointer-events-none whitespace-nowrap"
+        className="absolute inset-0 overflow-hidden pointer-events-none select-none"
       >
-        DEVELOPER
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bebas text-[clamp(3rem,18vw,12rem)] leading-none text-white/[0.02] whitespace-nowrap max-w-none">
+          DEVELOPER
+        </div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 sm:pt-28 pb-16 sm:pb-20 min-w-0">
         {/* Available badge */}
         <div className="animate-fade-up flex items-center gap-2 mb-8 w-fit">
           <span className="w-2 h-2 rounded-full bg-[#00ff87] animate-pulse" />
@@ -133,7 +135,7 @@ export default function Hero() {
           </a>
           <a
             href="mailto:lucas_e_93@hotmail.com"
-            className="flex items-center gap-2 px-6 py-3 border border-[#1e2d47] text-white font-karla font-medium text-sm rounded hover:border-[#00ff87]/50 hover:text-[#00ff87] transition-colors"
+            className="flex items-center gap-2 px-4 sm:px-6 py-3 border border-[#1e2d47] text-white font-karla font-medium text-xs sm:text-sm rounded hover:border-[#00ff87]/50 hover:text-[#00ff87] transition-colors max-w-full min-w-0"
           >
             <svg
               className="w-4 h-4"
@@ -148,12 +150,12 @@ export default function Hero() {
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            lucas_e_93@hotmail.com
+            <span className="truncate">lucas_e_93@hotmail.com</span>
           </a>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="animate-fade-up delay-700 mt-20 flex items-center gap-3">
+        {/* Scroll indicator — hidden on small screens to reduce hero height */}
+        <div className="animate-fade-up delay-700 mt-12 sm:mt-20 hidden sm:flex items-center gap-3">
           <div className="w-px h-12 bg-gradient-to-b from-transparent to-[#00ff87]" />
           <span className="text-xs text-[#6b7fa3] font-karla tracking-widest uppercase">
             Scroll

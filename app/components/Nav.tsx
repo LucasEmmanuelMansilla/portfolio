@@ -44,17 +44,17 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full max-w-[100vw] overflow-hidden transition-all duration-500 ${
         scrolled
           ? "bg-[#060810]/90 backdrop-blur-md border-b border-[#1e2d47]"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 gap-2 min-w-0">
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-bebas text-xl tracking-widest text-white hover:text-[#00ff87] transition-colors"
+          className="shrink-0 font-bebas text-xl tracking-widest text-white hover:text-[#00ff87] transition-colors"
         >
           LM<span className="text-[#00ff87]">.</span>
         </button>
@@ -89,9 +89,11 @@ export default function Nav() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          type="button"
+          className="md:hidden shrink-0 flex flex-col gap-1.5 p-2 -mr-1"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={menuOpen}
         >
           <span
             className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}

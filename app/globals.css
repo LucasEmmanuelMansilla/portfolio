@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @theme inline {
   --font-bebas: var(--font-bebas);
   --font-karla: var(--font-karla);

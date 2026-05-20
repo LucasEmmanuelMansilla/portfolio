@@ -32,7 +32,9 @@ export default function ChatWidget() {
   }, [isOpen]);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div
+      className="fixed z-[100] flex flex-col items-end gap-3 right-[max(0.75rem,env(safe-area-inset-right))] bottom-[max(0.75rem,env(safe-area-inset-bottom))] max-md:bottom-[max(1rem,env(safe-area-inset-bottom))]"
+    >
       {isOpen && (
         <div ref={panelRef} className="animate-fade-up">
           <ChatPanel onClose={() => setIsOpen(false)} />

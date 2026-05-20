@@ -77,12 +77,12 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contacto" ref={ref} className="relative py-24">
+    <section id="contacto" ref={ref} className="relative py-24 overflow-hidden w-full max-w-[100vw]">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1e2d47] to-transparent" />
 
       {/* Bottom glow */}
       <div
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none"
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[600px] h-[300px] pointer-events-none"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0,255,135,0.06) 0%, transparent 70%)",

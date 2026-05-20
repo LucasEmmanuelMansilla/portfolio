@@ -12,9 +12,9 @@ import ChatWidget from "./components/chat/ChatWidget";
 export default function Home() {
   return (
     <>
-      <div className="relative z-10">
+      <div className="relative z-10 w-full max-w-[100vw] overflow-x-hidden">
         <Nav />
-        <main>
+        <main className="w-full overflow-x-hidden">
           <Hero />
           <About />
           <Stats />
