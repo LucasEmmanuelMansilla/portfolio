@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import About from "./components/About";
 import Experience from "./components/Experience";
-import FeaturedTech from "./components/FeaturedTech";
+// import FeaturedTech from "./components/FeaturedTech";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
@@ -19,7 +19,7 @@ export default function Home() {
           <About />
           <Stats />
           <Experience />
-          <FeaturedTech />
+          {/* <FeaturedTech /> */}
           <Skills />
           <Education />
           <Contact />
