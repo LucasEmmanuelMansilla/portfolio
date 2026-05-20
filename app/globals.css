@@ -191,3 +191,64 @@ body::after {
   background: rgba(0, 255, 135, 0.25);
   color: #fff;
 }
+
+/* Chat markdown */
+@import "highlight.js/styles/github-dark.min.css";
+
+.chat-markdown p {
+  margin: 0 0 0.5em;
+}
+
+.chat-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-markdown ul,
+.chat-markdown ol {
+  margin: 0.25em 0 0.5em 1.25em;
+  padding: 0;
+}
+
+.chat-markdown li {
+  margin: 0.15em 0;
+}
+
+.chat-markdown a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.chat-markdown code:not(pre code) {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+}
+
+.chat-markdown pre {
+  margin: 0.5em 0;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+}
+
+.chat-markdown pre code {
+  font-size: 0.8em;
+  padding: 0.75em 1em;
+  display: block;
+}
+
+.chat-markdown strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.chat-markdown h1,
+.chat-markdown h2,
+.chat-markdown h3 {
+  font-weight: 600;
+  margin: 0.5em 0 0.25em;
+  color: var(--color-text);
+}
