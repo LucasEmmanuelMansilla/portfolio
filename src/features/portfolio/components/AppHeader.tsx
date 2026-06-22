@@ -1,12 +1,14 @@
 "use client";
 
 import { ChevronLeft } from "lucide-react";
+import { cn } from "@/src/lib/cn";
 
 interface AppHeaderProps {
   readonly title: string;
   readonly subtitle?: string;
   readonly showBack?: boolean;
   readonly onBack?: () => void;
+  readonly className?: string;
 }
 
 export function AppHeader({
@@ -14,9 +16,15 @@ export function AppHeader({
   subtitle,
   showBack = false,
   onBack,
+  className,
 }: AppHeaderProps) {
   return (
-    <header className="shrink-0 px-4 pt-2 pb-3 border-b border-border/50 bg-surface/80 backdrop-blur-md">
+    <header
+      className={cn(
+        "shrink-0 px-4 pt-2 pb-3 border-b border-border/50 bg-surface/80 backdrop-blur-md",
+        className
+      )}
+    >
       <div className="flex items-center gap-2">
         {showBack && onBack && (
           <button

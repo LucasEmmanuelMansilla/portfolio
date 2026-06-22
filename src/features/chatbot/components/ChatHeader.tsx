@@ -1,6 +1,8 @@
 import { ChevronLeft, RotateCcw } from "lucide-react";
 import { Avatar } from "@/src/components/ui/Avatar";
 import { profile } from "@/src/data/profile";
+import { usePlatform } from "@/src/hooks/usePlatform";
+import { cn } from "@/src/lib/cn";
 
 interface ChatHeaderProps {
   readonly onBack: () => void;
@@ -15,8 +17,15 @@ export function ChatHeader({
   canClear = false,
   isLoading = false,
 }: ChatHeaderProps) {
+  const { isMobile } = usePlatform();
+
   return (
-    <div className="flex items-center justify-between px-4 py-3 border-b border-border/50 shrink-0">
+    <div
+      className={cn(
+        "flex items-center justify-between px-4 py-3 border-b border-border/50 shrink-0",
+        isMobile && "pt-[max(0.75rem,env(safe-area-inset-top))]"
+      )}
+    >
       <div className="flex items-center gap-2 min-w-0">
         <button
           type="button"

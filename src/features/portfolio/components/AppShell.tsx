@@ -51,6 +51,7 @@ interface AppShellProps {
 export function AppShell({ fullscreen = false }: AppShellProps) {
   const activeTab = useAppNavStore((state) => state.activeTab);
   const isChat = activeTab === "chat";
+  const showDeviceChrome = !fullscreen;
 
   return (
     <div
@@ -59,8 +60,17 @@ export function AppShell({ fullscreen = false }: AppShellProps) {
         fullscreen && "fixed inset-0 z-50 h-dvh w-full"
       )}
     >
-      <StatusBar light />
-      {!isChat && <AppHeader title={TAB_TITLES[activeTab]} />}
+      {showDeviceChrome && <StatusBar light />}
+      {!isChat && (
+        <AppHeader
+          title={TAB_TITLES[activeTab]}
+          className={
+            showDeviceChrome
+              ? undefined
+              : "pt-[max(0.5rem,env(safe-area-inset-top))]"
+          }
+        />
+      )}
       <ScreenTransition screenKey={activeTab} animate={false}>
         {renderScreen(activeTab)}
       </ScreenTransition>
