@@ -53,7 +53,7 @@ function getInitialState(
   }
 
   if (platform.isMobile) {
-    return "STARTING_METRO";
+    return "LAUNCHING_APPLICATION";
   }
 
   return "BOOTING";
