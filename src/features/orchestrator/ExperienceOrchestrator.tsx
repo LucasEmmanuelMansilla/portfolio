@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { AnimatePresence, m } from "framer-motion";
 import { useExperienceSequence } from "@/src/features/experience/hooks/useExperienceSequence";
 import { BootScreen } from "@/src/features/boot/components/BootScreen";
+import { MobileBuildScreen } from "@/src/features/terminal/components/MobileBuildScreen";
 import { SplashScreen } from "@/src/features/portfolio/components/SplashScreen";
 import { PortfolioApp } from "@/src/features/portfolio/components/PortfolioApp";
 import { SkipBootButton } from "@/src/features/orchestrator/SkipBootButton";
@@ -36,6 +37,21 @@ function renderSimulatorContent(state: ExperienceState) {
 
 function MobileExperience() {
   const state = useExperienceStore((store) => store.state);
+
+  if (state === "STARTING_METRO") {
+    return (
+      <m.div
+        key="mobile-build"
+        variants={fadeVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="fixed inset-0 z-40"
+      >
+        <MobileBuildScreen />
+      </m.div>
+    );
+  }
 
   if (state === "LAUNCHING_APPLICATION") {
     return (

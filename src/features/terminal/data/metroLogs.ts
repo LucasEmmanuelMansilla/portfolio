@@ -149,6 +149,41 @@ export function getMetroSegments(): readonly MetroSegment[] {
   return getMetroStartupSegments();
 }
 
+export function getMobileBuildSegments(): readonly MetroSegment[] {
+  const appPath = `${PROJECT_PATH}/app`;
+
+  return [
+    line(
+      "mob-metro",
+      "info Starting Metro Bundler on port 8081...",
+      280,
+      "bright"
+    ),
+    line(
+      "mob-scan",
+      `Scanning folders for symlinks in ${PROJECT_PATH}/node_modules (48ms)`,
+      320,
+      "dim"
+    ),
+    blank("mob-blank-1", 180),
+    line("mob-graph", "info Loading dependency graph...", 360),
+    line("mob-graph-done", "Loading dependency graph, done.", 320),
+    line("mob-build", "info Building JavaScript bundle...", 380, "bright"),
+    {
+      id: "mob-bundle",
+      kind: "bundle",
+      text: "[ios, dev]",
+      delayMs: 360,
+    },
+    line("mob-bundle-done", "info Bundle built successfully", 420, "bright"),
+    line("mob-hermes", "Hermes bytecode compiled.", 320, "dim"),
+    line("mob-fresh", "Fast Refresh enabled.", 360),
+    blank("mob-blank-2", 200),
+    line("mob-path", `   ${appPath}`, 280, "dim"),
+    line("mob-ready", "Metro Bundler ready.", 400, "bright"),
+  ];
+}
+
 export const metroLogsMobile: readonly MetroLogLine[] = [
   { text: "Metro Bundler", delayMs: 0, color: "info" },
   { text: "Building app...", delayMs: 500 },
