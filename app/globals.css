@@ -24,6 +24,9 @@ body {
   --color-text: #e8edf5;
   --color-muted: #6b7fa3;
   --color-faint: #2a3a55;
+
+  --color-ios: #0a84ff;
+  --color-ios-surface: #000000;
 }
 
 @utility font-bebas {
@@ -32,32 +35,6 @@ body {
 
 @utility font-karla {
   font-family: var(--font-karla);
-}
-
-/* Noise texture overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.35;
-}
-
-/* Subtle grid background */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: linear-gradient(
-      rgba(0, 255, 135, 0.025) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, rgba(0, 255, 135, 0.025) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* ─── Animations ──────────────────────────────────────────── */
@@ -181,6 +158,17 @@ body::after {
   color: var(--color-accent);
 }
 
+/* Hide scrollbar inside emulated mobile screens */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
@@ -200,6 +188,19 @@ body::after {
 ::selection {
   background: rgba(0, 255, 135, 0.25);
   color: #fff;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Chat markdown */

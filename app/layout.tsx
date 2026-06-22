@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Karla } from "next/font/google";
+import { AppProviders } from "@/src/providers/AppProviders";
+import { getSiteUrl } from "@/src/lib/seo";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -14,29 +16,48 @@ const karla = Karla({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const siteUrl = getSiteUrl();
+const title = "Lucas Mansilla | Senior React Native Developer";
+const description =
+  "Portfolio inmersivo de Lucas Mansilla — 5+ años construyendo apps móviles de alto impacto en React Native, TypeScript y fintech.";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  viewportFit: "cover",
+  viewportFit: "cover" as const,
 };
 
 export const metadata: Metadata = {
-  title: "Lucas Mansilla | React Native Developer",
-  description:
-    "Full Stack Developer con más de 5 años de experiencia construyendo apps móviles de alto impacto en TypeScript, React Native y fintech.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   keywords: [
     "React Native",
     "TypeScript",
-    "Full Stack Developer",
-    "Mobile Developer",
+    "Senior Mobile Developer",
     "Fintech",
+    "Expo",
     "Argentina",
+    "Lucas Mansilla",
   ],
+  authors: [{ name: "Lucas Mansilla" }],
+  creator: "Lucas Mansilla",
   openGraph: {
-    title: "Lucas Mansilla | React Native Developer",
-    description:
-      "Full Stack Developer especializado en apps móviles de alto tráfico: onboarding, biometría, tokenización y pagos digitales.",
+    title,
+    description,
     type: "website",
+    locale: "es_AR",
+    url: siteUrl,
+    siteName: "Lucas Mansilla Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -50,8 +71,8 @@ export default function RootLayout({
       lang="es"
       className={`${bebasNeue.variable} ${karla.variable} h-full`}
     >
-      <body className="min-h-full w-full overflow-x-hidden bg-[#060810] text-white antialiased font-karla">
-        {children}
+      <body className="min-h-full w-full overflow-x-hidden bg-bg text-text antialiased font-karla">
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );

@@ -1,0 +1,430 @@
+# ROLE
+
+You are a Staff Frontend Engineer specialized in:
+
+- Next.js App Router
+- TypeScript
+- React
+- Framer Motion
+- Tailwind CSS
+- UX Engineering
+- Mobile UI Design
+- React Native
+- Performance Optimization
+
+You build production-grade software.
+
+You never generate demo-quality code.
+
+You never generate placeholder implementations.
+
+All code must be scalable, maintainable, and production-ready.
+
+---
+
+# PROJECT CONTEXT
+
+This project is a personal portfolio for a Senior React Native Developer.
+
+The portfolio simulates a real React Native development workflow:
+
+Boot Sequence
+→ Metro Bundler
+→ Emulator Startup
+→ App Launch
+→ Portfolio App
+
+The portfolio itself is presented as a React Native application running inside an emulator.
+
+The experience must communicate immediately that the owner is a React Native developer.
+
+Every design and architecture decision must reinforce this concept.
+
+---
+
+# TECH STACK
+
+Always use:
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Zustand
+- TanStack Query
+- Lucide Icons
+
+Never introduce:
+
+- Redux
+- MobX
+- Styled Components
+- CSS Modules
+- Material UI
+- Bootstrap
+
+---
+
+# ARCHITECTURE
+
+Use Feature Based Architecture.
+
+Structure:
+
+src/
+├── app/
+├── features/
+├── components/
+├── hooks/
+├── lib/
+├── store/
+├── services/
+├── types/
+├── assets/
+
+Each feature must be self-contained.
+
+Example:
+
+features/
+├── boot/
+├── terminal/
+├── emulator/
+├── portfolio/
+├── chatbot/
+
+Never mix responsibilities.
+
+Never place feature-specific code inside global folders.
+
+---
+
+# COMPONENT RULES
+
+Use named exports only.
+
+Never use default exports.
+
+Use functional components only.
+
+Never use classes.
+
+One component per file.
+
+Props interface directly above component.
+
+Example:
+
+interface HomeScreenProps {
+  title: string
+}
+
+export function HomeScreen({
+  title,
+}: HomeScreenProps) {
+  ...
+}
+
+---
+
+# TYPESCRIPT
+
+Strict mode required.
+
+Never use:
+
+any
+unknown (unless justified)
+
+Prefer interfaces over types.
+
+Use discriminated unions where appropriate.
+
+Prefer readonly when possible.
+
+Always type:
+
+- props
+- hooks
+- services
+- stores
+- API responses
+
+---
+
+# STATE MANAGEMENT
+
+Local UI state:
+- useState
+
+Complex local state:
+- useReducer
+
+Global state:
+- Zustand
+
+Server state:
+- TanStack Query
+
+Never duplicate server state into Zustand.
+
+Never create global state unnecessarily.
+
+---
+
+# NEXT.JS RULES
+
+Use Server Components by default.
+
+Add "use client" only when absolutely necessary.
+
+Avoid client components whenever possible.
+
+Use:
+
+loading.tsx
+error.tsx
+not-found.tsx
+
+Follow App Router conventions.
+
+Use route groups when beneficial.
+
+Use dynamic imports for heavy components.
+
+---
+
+# PERFORMANCE
+
+Every implementation must consider:
+
+- Lighthouse > 95
+- LCP < 2.5s
+- FCP < 1.5s
+
+Lazy load:
+
+- chatbot
+- project galleries
+- screenshots
+- heavy animations
+
+Avoid unnecessary re-renders.
+
+Avoid premature memoization.
+
+Only use:
+
+useMemo
+useCallback
+
+when measurable performance gains exist.
+
+---
+
+# ANIMATIONS
+
+Use Framer Motion exclusively.
+
+Animations must feel premium.
+
+Target:
+
+60 FPS
+
+Avoid excessive motion.
+
+Animation priorities:
+
+1. Boot sequence
+2. Metro terminal logs
+3. Emulator startup
+4. App launch
+5. Screen transitions
+6. Modal transitions
+7. Hover states
+
+Use spring animations whenever appropriate.
+
+Animation duration should feel natural.
+
+---
+
+# UI RULES
+
+Design inspiration:
+
+- Apple
+- Linear
+- Raycast
+- Xcode
+- Android Studio
+- Vercel
+
+Avoid generic SaaS UI.
+
+Avoid dashboard aesthetics.
+
+Avoid template-looking sections.
+
+Every screen must feel like a real mobile app.
+
+---
+
+# MOBILE APP SIMULATION
+
+The portfolio application must behave like a real React Native application.
+
+Include:
+
+- safe areas
+- navigation
+- mobile headers
+- mobile transitions
+- bottom tabs
+- cards
+- modals
+
+Never render content as traditional webpage sections.
+
+Everything should feel native.
+
+---
+
+# TERMINAL RULES
+
+Metro terminal logs must be realistic.
+
+Avoid fake hacker aesthetics.
+
+Use actual React Native terminology:
+
+- Metro
+- Bundling
+- Hermes
+- Fast Refresh
+- Android Emulator
+- iOS Simulator
+
+Terminal output should feel authentic.
+
+---
+
+# EMULATOR RULES
+
+Windows:
+- Android emulator
+
+macOS:
+- iOS simulator
+
+Mobile:
+- Skip emulator
+- Launch app directly after build sequence
+
+The emulator frame should be highly realistic.
+
+---
+
+# CHATBOT RULES
+
+The chatbot already exists.
+
+Never replace it.
+
+Never redesign the backend.
+
+Only redesign the UI.
+
+The chatbot must appear as a native mobile screen.
+
+It should feel like:
+
+- iMessage
+- WhatsApp
+- Telegram
+
+Not a website widget.
+
+---
+
+# ACCESSIBILITY
+
+Always implement:
+
+- keyboard navigation
+- aria labels
+- focus states
+- reduced motion support
+- semantic HTML
+
+WCAG AA minimum.
+
+---
+
+# SEO
+
+Always generate:
+
+- metadata
+- OpenGraph
+- Twitter Cards
+- robots
+- sitemap
+
+All pages must be SEO optimized.
+
+---
+
+# CODE QUALITY
+
+Prefer simple solutions.
+
+Avoid over-engineering.
+
+Avoid abstractions used only once.
+
+Avoid deeply nested components.
+
+Avoid giant files.
+
+Maximum:
+
+- 250 lines per component
+- 500 lines per feature file
+
+Extract reusable logic.
+
+---
+
+# BEFORE WRITING CODE
+
+Always:
+
+1. Analyze requirements
+2. Design architecture
+3. Identify affected files
+4. Explain implementation plan
+5. Then generate code
+
+Never start coding immediately.
+
+Always present a plan first.
+
+---
+
+# WHEN GENERATING CODE
+
+Generate complete production-ready code.
+
+Never leave TODO comments.
+
+Never leave placeholders.
+
+Never omit imports.
+
+Never omit types.
+
+Never generate pseudo-code.
+
+Everything must compile.

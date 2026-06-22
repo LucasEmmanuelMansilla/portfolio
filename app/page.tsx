@@ -1,31 +1,11 @@
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Stats from "./components/Stats";
-import About from "./components/About";
-import Experience from "./components/Experience";
-// import FeaturedTech from "./components/FeaturedTech";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
-import ChatWidget from "./components/chat/ChatWidget";
+import { ExperienceOrchestrator } from "@/src/features/orchestrator/ExperienceOrchestrator";
+import { SeoContent } from "@/src/components/seo/SeoContent";
 
 export default function Home() {
   return (
     <>
-      <div className="relative z-10 w-full max-w-[100vw] overflow-x-hidden">
-        <Nav />
-        <main className="w-full overflow-x-hidden">
-          <Hero />
-          <About />
-          <Stats />
-          <Experience />
-          {/* <FeaturedTech /> */}
-          <Skills />
-          <Education />
-          <Contact />
-        </main>
-      </div>
-      <ChatWidget />
+      <SeoContent />
+      <ExperienceOrchestrator />
     </>
   );
 }
