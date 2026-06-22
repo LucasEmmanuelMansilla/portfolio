@@ -36,7 +36,8 @@ export const DESKTOP_STATE_SEQUENCE: readonly ExperienceStateMeta[] = [
 ];
 
 export const MOBILE_STATE_SEQUENCE: readonly ExperienceStateMeta[] = [
-  { state: "LAUNCHING_APPLICATION", durationMs: 3200 },
+  { state: "INSTALLING_IPA", durationMs: 2200 },
+  { state: "LAUNCHING_APPLICATION", durationMs: 1800 },
   { state: "APPLICATION_READY", durationMs: 0 },
 ];
 

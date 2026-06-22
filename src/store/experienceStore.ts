@@ -53,7 +53,7 @@ function getInitialState(
   }
 
   if (platform.isMobile) {
-    return "LAUNCHING_APPLICATION";
+    return "INSTALLING_IPA";
   }
 
   return "BOOTING";

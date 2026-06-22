@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { m } from "framer-motion";
 import { EmulatorToolbar } from "@/src/features/emulator/components/EmulatorToolbar";
+import { InstallingAppScreen } from "@/src/features/emulator/components/InstallingAppScreen";
 import {
   simulatorViewportClass,
   simulatorWindowSizeClass,
@@ -34,17 +35,7 @@ function SimulatorBootScreen() {
 }
 
 function SimulatorInstallingScreen() {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#1c1c1e] px-6 text-center">
-      <m.div
-        className="mb-4 h-10 w-10 rounded-xl bg-ios/20"
-        animate={{ opacity: [0.5, 1, 0.5] }}
-        transition={{ duration: 1.4, repeat: Infinity }}
-      />
-      <p className="text-sm font-medium text-white/80">Installing PortfolioApp</p>
-      <p className="mt-1 font-mono text-[11px] text-white/40">Debug-iphonesimulator</p>
-    </div>
-  );
+  return <InstallingAppScreen />;
 }
 
 function SimulatorOpeningScreen() {
