@@ -8,6 +8,7 @@ interface AppHeaderProps {
   readonly subtitle?: string;
   readonly showBack?: boolean;
   readonly onBack?: () => void;
+  readonly large?: boolean;
   readonly className?: string;
 }
 
@@ -16,30 +17,41 @@ export function AppHeader({
   subtitle,
   showBack = false,
   onBack,
+  large = false,
   className,
 }: AppHeaderProps) {
   return (
     <header
       className={cn(
-        "shrink-0 px-4 pt-2 pb-3 border-b border-border/50 bg-surface/80 backdrop-blur-md",
+        "shrink-0 bg-ios-surface/95 backdrop-blur-xl",
+        large ? "px-5 pb-2 pt-1" : "border-b border-ios-separator px-5 pb-3 pt-2",
         className
       )}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1">
         {showBack && onBack && (
           <button
             type="button"
             onClick={onBack}
             aria-label="Volver"
-            className="p-1 -ml-1 rounded-lg hover:bg-white/5 text-ios"
+            className="-ml-2 rounded-lg p-1.5 text-ios active:bg-ios-label/[0.08]"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="h-[22px] w-[22px]" strokeWidth={2.5} />
           </button>
         )}
-        <div>
-          <h1 className="text-lg font-semibold text-text leading-tight">{title}</h1>
+        <div className="min-w-0 flex-1">
+          <h1
+            className={cn(
+              "font-bold leading-tight tracking-tight text-ios-label",
+              large ? "text-[28px]" : "text-[15px]"
+            )}
+          >
+            {title}
+          </h1>
           {subtitle && (
-            <p className="text-xs text-muted mt-0.5">{subtitle}</p>
+            <p className="mt-0.5 text-[13px] text-ios-label-secondary">
+              {subtitle}
+            </p>
           )}
         </div>
       </div>

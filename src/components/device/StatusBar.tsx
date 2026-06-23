@@ -2,56 +2,127 @@ import { cn } from "@/src/lib/cn";
 
 interface StatusBarProps {
   readonly className?: string;
+  /** Iconos claros sobre fondo oscuro (boot / splash) */
   readonly light?: boolean;
 }
 
+function DynamicIsland() {
+  return (
+    <div
+      className="pointer-events-none absolute left-1/2 top-[7px] z-20 -translate-x-1/2"
+      aria-hidden
+    >
+      <div
+        className={cn(
+          "relative h-[30px] w-[102px] rounded-full",
+          "bg-gradient-to-b from-[#1c1c1e] via-[#0a0a0a] to-black",
+          "shadow-[0_1px_2px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.05)]"
+        )}
+      >
+        <div className="absolute inset-x-[10px] top-[4px] h-[3px] rounded-full bg-white/[0.04]" />
+        <div className="absolute right-[12px] top-1/2 flex -translate-y-1/2 items-center gap-[3px]">
+          <div className="h-[8px] w-[8px] rounded-full bg-[#0b0b0d] ring-1 ring-[#252528]" />
+          <div className="h-[5px] w-[5px] rounded-full bg-[#101012] opacity-80" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function StatusCellular({ className }: { readonly className?: string }) {
+  return (
+    <svg
+      className={cn("h-[10px] w-[16px]", className)}
+      viewBox="0 0 18 12"
+      fill="currentColor"
+      aria-hidden
+    >
+      <rect x="0" y="7" width="3.2" height="5" rx="0.6" />
+      <rect x="4.8" y="4.5" width="3.2" height="7.5" rx="0.6" />
+      <rect x="9.6" y="2" width="3.2" height="10" rx="0.6" />
+      <rect x="14.4" y="0" width="3.2" height="12" rx="0.6" />
+    </svg>
+  );
+}
+
+function StatusWifi({ className }: { readonly className?: string }) {
+  return (
+    <svg
+      className={cn("h-[10px] w-[14px]", className)}
+      viewBox="0 0 16 12"
+      fill="currentColor"
+      aria-hidden
+    >
+      <circle cx="8" cy="10.1" r="1.15" />
+      <path d="M5.2 7.2a3.9 3.9 0 015.6 0l-.8 1a2.7 2.7 0 00-4 0l-.8-1z" />
+      <path d="M2.6 4.6a7.4 7.4 0 0110.8 0l-.9 1.1a5.9 5.9 0 00-9 0L2.6 4.6z" />
+      <path
+        d="M0 2.1a10.8 10.8 0 0116 0l-.9 1.1a9.2 9.2 0 00-14.2 0L0 2.1z"
+        opacity="0.42"
+      />
+    </svg>
+  );
+}
+
+function StatusBattery({ className }: { readonly className?: string }) {
+  return (
+    <svg
+      className={cn("h-[11px] w-[24px]", className)}
+      viewBox="0 0 27 13"
+      fill="currentColor"
+      aria-hidden
+    >
+      <rect
+        x="0.5"
+        y="0.5"
+        width="22"
+        height="12"
+        rx="3"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.38"
+      />
+      <rect x="2" y="2" width="16.5" height="9" rx="1.8" />
+      <path
+        d="M24.5 4.6v3.8c.8-.3 1.3-1 1.3-1.9s-.5-1.6-1.3-1.9z"
+        opacity="0.38"
+      />
+    </svg>
+  );
+}
+
 export function StatusBar({ className, light = false }: StatusBarProps) {
-  const textColor = light ? "text-white" : "text-black";
+  const foreground = light ? "text-white" : "text-[#1d1d1f]";
 
   return (
     <div
       className={cn(
-        "grid grid-cols-[1fr_auto_1fr] items-end px-[14px] pt-[8.4px] pb-[2.8px] h-[37.8px] text-[10.5px] font-semibold tracking-[-0.02em] shrink-0",
-        textColor,
+        "relative h-[52px] w-full shrink-0 select-none bg-ios-surface",
+        foreground,
         className
       )}
       aria-hidden
     >
-      <span className="justify-self-start leading-none">9:41</span>
+      <DynamicIsland />
 
-      <div className="w-[84px]" />
+      <div className="absolute inset-x-0 bottom-[7px] flex items-center justify-between px-[18px]">
+        <time
+          dateTime="09:41"
+          className={cn(
+            "font-[system-ui,-apple-system,BlinkMacSystemFont,'SF_Pro_Text','Segoe_UI',sans-serif]",
+            "text-[13px] font-semibold leading-none tracking-[-0.02em] tabular-nums",
+            !light && "text-[#1d1d1f]"
+          )}
+        >
+          9:41
+        </time>
 
-      <div className="flex items-center justify-end gap-[3.5px] justify-self-end">
-        <svg className="w-[11.9px] h-[7.7px]" viewBox="0 0 17 11" fill="currentColor">
-          <rect x="0" y="7" width="3" height="4" rx="0.5" />
-          <rect x="4.5" y="4.5" width="3" height="6.5" rx="0.5" />
-          <rect x="9" y="2" width="3" height="9" rx="0.5" />
-          <rect x="13.5" y="0" width="3" height="11" rx="0.5" />
-        </svg>
-        <svg className="w-[10.5px] h-[7.7px]" viewBox="0 0 15 11" fill="currentColor">
-          <path d="M7.5 2.2c1.8 0 3.4.7 4.6 1.9l1.2-1.2C11.8 1.3 9.8.5 7.5.5S3.2 1.3 1.7 2.9l1.2 1.2c1.2-1.2 2.8-1.9 4.6-1.9z" />
-          <path d="M7.5 5.5c1.1 0 2.1.4 2.9 1.1l1.2-1.2c-1.1-.9-2.5-1.4-4.1-1.4s-3 .5-4.1 1.4l1.2 1.2c.8-.7 1.8-1.1 2.9-1.1z" />
-          <circle cx="7.5" cy="9.2" r="1.3" />
-        </svg>
-        <svg className="w-[17.5px] h-[8.4px]" viewBox="0 0 25 12" fill="currentColor">
-          <rect
-            x="0.5"
-            y="0.5"
-            width="21"
-            height="11"
-            rx="2.5"
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="1"
-            opacity="0.35"
-          />
-          <rect x="2" y="2" width="16" height="8" rx="1.5" />
-          <path
-            d="M23 4.5v3a1.5 1.5 0 000-3z"
-            fill="currentColor"
-            opacity="0.35"
-          />
-        </svg>
+        <div className="flex items-center gap-[5px]">
+          <StatusCellular className={foreground} />
+          <StatusWifi className={foreground} />
+          <StatusBattery className={foreground} />
+        </div>
       </div>
     </div>
   );

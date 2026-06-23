@@ -19,16 +19,16 @@ export function MessageBubble({ message, isStreaming }: MessageBubbleProps) {
     <div className={cn("flex mb-3", isUser ? "justify-end" : "justify-start")}>
       <div
         className={cn(
-          "max-w-[85%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+          "max-w-[85%] rounded-2xl px-3 py-2 text-xs leading-relaxed",
           isUser
             ? "bg-ios text-white rounded-br-md"
-            : "bg-surface-2 border border-border text-text rounded-bl-md"
+            : "bg-ios-grouped border border-ios-separator text-ios-label rounded-bl-md shadow-sm shadow-[rgba(108,84,62,0.05)]"
         )}
       >
         {isUser ? (
           <p className="whitespace-pre-wrap">{message.content}</p>
         ) : (
-          <div className="chat-markdown text-sm">
+          <div className="chat-markdown text-xs">
             {message.content ? (
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}

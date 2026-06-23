@@ -25,8 +25,14 @@ body {
   --color-muted: #6b7fa3;
   --color-faint: #2a3a55;
 
-  --color-ios: #0a84ff;
-  --color-ios-surface: #000000;
+  --color-ios: #c4654a;
+  --color-ios-surface: #f5efe6;
+  --color-ios-grouped: #fffcf8;
+  --color-ios-cell: #ede3d6;
+  --color-ios-separator: rgba(108, 84, 62, 0.16);
+  --color-ios-label: #231c14;
+  --color-ios-label-secondary: rgba(35, 28, 20, 0.82);
+  --color-ios-label-tertiary: rgba(35, 28, 20, 0.58);
 }
 
 @utility font-bebas {
@@ -225,7 +231,7 @@ body {
 }
 
 .chat-markdown a {
-  color: var(--color-accent);
+  color: var(--color-ios);
   text-decoration: underline;
   text-underline-offset: 2px;
 }

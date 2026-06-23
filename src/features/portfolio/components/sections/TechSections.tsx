@@ -1,69 +1,92 @@
 "use client";
 
 import Image from "next/image";
-import { Card } from "@/src/components/ui/Card";
-import { Tag } from "@/src/components/ui/Tag";
+import {
+  NativeListRow,
+  NativeListSection,
+} from "@/src/features/portfolio/components/NativeList";
 import {
   featuredTechnologies,
   languages,
   skillGroups,
 } from "@/src/data/techStack";
 
+const FINTECH_SKILL_CATEGORY = "Pagos & Seguridad";
+
 export function TechSections() {
+  const fintechSkills = skillGroups.find(
+    (group) => group.category === FINTECH_SKILL_CATEGORY
+  );
+  const otherSkillGroups = skillGroups.filter(
+    (group) => group.category !== FINTECH_SKILL_CATEGORY
+  );
+
   return (
-    <div className="space-y-5">
-      <div>
-        <div className="grid grid-cols-3 gap-3">
+    <div className="space-y-6">
+      <div className="mx-4">
+        <div className="flex gap-3 overflow-x-auto no-scrollbar pb-1">
           {featuredTechnologies.map((tech) => (
-            <Card
+            <div
               key={tech.id}
-              className="p-3 flex flex-col items-center text-center border-border/60"
+              className="flex w-[72px] shrink-0 flex-col items-center gap-1.5 rounded-[10px] border border-ios-separator/50 bg-ios-grouped p-3 shadow-sm shadow-[rgba(108,84,62,0.05)]"
             >
-              <div className="w-10 h-10 relative mb-2">
+              <div className="relative h-9 w-9">
                 <Image
                   src={`/logos/${tech.logoFile}`}
                   alt={tech.name}
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="36px"
                 />
               </div>
-              <span className="text-[10px] font-medium text-text leading-tight">
+              <span className="text-center text-[10px] leading-tight text-ios-label-secondary">
                 {tech.name}
               </span>
-            </Card>
+            </div>
           ))}
         </div>
       </div>
 
-      <div className="space-y-3">
-        {skillGroups.map((group) => (
-          <Card key={group.category} className="p-4 border-border/60">
-            <h4 className="text-[10px] uppercase tracking-widest mb-2 text-ios">
-              {group.category}
-            </h4>
-            <div className="flex flex-wrap gap-1.5">
-              {group.items.map((item) => (
-                <Tag key={item} variant="ios">
-                  {item}
-                </Tag>
-              ))}
-            </div>
-          </Card>
-        ))}
-      </div>
+      {fintechSkills && (
+        <NativeListSection
+          title={FINTECH_SKILL_CATEGORY}
+          footer="Integraciones en producción con procesadores y wallets nativas."
+        >
+          {fintechSkills.items.map((item, index) => (
+            <NativeListRow
+              key={item}
+              label={item}
+              showChevron={false}
+              isLast={index === fintechSkills.items.length - 1}
+            />
+          ))}
+        </NativeListSection>
+      )}
 
-      <Card className="p-4 border-border/60 space-y-3">
-        <h4 className="text-[10px] uppercase tracking-widest text-ios">
-          Idiomas
-        </h4>
-        {languages.map((lang) => (
-          <div key={lang.lang}>
-            <div className="flex justify-between text-xs mb-1.5">
-              <span className="text-text font-medium">{lang.lang}</span>
-              <span className="text-muted">{lang.level}</span>
+      {otherSkillGroups.map((group) => (
+        <NativeListSection key={group.category} title={group.category}>
+          {group.items.map((item, index) => (
+            <NativeListRow
+              key={item}
+              label={item}
+              showChevron={false}
+              isLast={index === group.items.length - 1}
+            />
+          ))}
+        </NativeListSection>
+      ))}
+
+      <NativeListSection title="Idiomas">
+        {languages.map((lang, index) => (
+          <div
+            key={lang.lang}
+            className={`px-4 py-[9px] ${index < languages.length - 1 ? "border-b border-ios-separator" : ""}`}
+          >
+            <div className="mb-2 flex justify-between text-[15px]">
+              <span className="text-ios-label">{lang.lang}</span>
+              <span className="text-ios-label-secondary">{lang.level}</span>
             </div>
-            <div className="h-1 bg-border rounded-full overflow-hidden">
+            <div className="h-[4px] overflow-hidden rounded-full bg-ios-cell">
               <div
                 className="h-full rounded-full bg-ios"
                 style={{ width: `${lang.pct}%` }}
@@ -71,7 +94,7 @@ export function TechSections() {
             </div>
           </div>
         ))}
-      </Card>
+      </NativeListSection>
     </div>
   );
 }

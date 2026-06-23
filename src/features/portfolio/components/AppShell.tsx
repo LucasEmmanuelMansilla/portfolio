@@ -60,10 +60,11 @@ export function AppShell({ fullscreen = false }: AppShellProps) {
         fullscreen && "fixed inset-0 z-50 h-dvh w-full"
       )}
     >
-      {showDeviceChrome && <StatusBar light />}
-      {!isChat && (
+      {showDeviceChrome && <StatusBar />}
+      {!isChat && activeTab !== "home" && (
         <AppHeader
           title={TAB_TITLES[activeTab]}
+          large={false}
           className={
             showDeviceChrome
               ? undefined
@@ -71,12 +72,12 @@ export function AppShell({ fullscreen = false }: AppShellProps) {
           }
         />
       )}
-      <ScreenTransition screenKey={activeTab} animate={false}>
+      <ScreenTransition screenKey={activeTab} animate>
         {renderScreen(activeTab)}
       </ScreenTransition>
-      <ProjectDetailSheet />
       {!isChat && <BottomTabBar />}
-      <HomeIndicator light />
+      <HomeIndicator />
+      <ProjectDetailSheet />
     </div>
   );
 }

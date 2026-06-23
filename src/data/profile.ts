@@ -5,46 +5,46 @@ export const profile: Profile = {
   firstName: "Lucas",
   lastName: "Mansilla",
   title: "Senior React Native Developer",
-  subtitle: "Full Stack Developer",
+  subtitle: "Especialista en Fintech & Banca",
   summary:
-    "5+ años construyendo aplicaciones móviles de alto tráfico en fintech, banca y billeteras digitales. Especializado en onboarding, biometría, tokenización y pagos.",
+    "5+ años en apps bancarias y billeteras digitales. Tokenización, Apple/Google Pay, biometría y onboarding KYC en producción.",
   location: "Argentina",
   phone: "+54 9 364 462-0191",
   available: true,
-  avatarSlot: "",
+  avatarSlot: "/images/1743385238765.jpg",
   tags: [
-    "React Native",
-    "TypeScript",
     "Fintech",
-    "Mobile Apps",
-    "Zustand",
-    "Node.js",
+    "Banca",
+    "React Native",
+    "Pagos digitales",
+    "TypeScript",
+    "Biometría",
   ],
   linkedin: "https://www.linkedin.com/in/lucasemansilla/",
   email: "lucas_e_93@hotmail.com",
 };
 
 export const aboutParagraphs: readonly string[] = [
-  "Soy un Full Stack Developer con más de 5 años de experiencia construyendo, optimizando y escalando aplicaciones móviles en TypeScript y React Native.",
-  "Trabajé en proyectos de alto impacto en fintech, banca, logística y billeteras virtuales, participando en todo el ciclo: desarrollo de nuevas funcionalidades, estabilización de aplicaciones críticas, mejora de performance y despliegues a tiendas.",
-  "Mi fortaleza está en resolver problemas técnicos complejos, mejorar la experiencia del usuario final y asegurar aplicaciones robustas en entornos con miles de usuarios activos.",
+  "Desarrollador mobile con más de 5 años construyendo aplicaciones bancarias, billeteras digitales y plataformas fintech en React Native y TypeScript.",
+  "Especializado en tokenización de tarjetas (Thales, Fiserv, Prisma), Apple Pay, Google Pay, autenticación biométrica y flujos de onboarding con KYC.",
+  "Experiencia end-to-end en apps de alto tráfico: desde la integración de APIs de pagos hasta el despliegue en tiendas y soporte en producción.",
 ];
 
 export const highlights: readonly Highlight[] = [
   {
-    icon: "mobile",
-    title: "Apps móviles de alto tráfico",
-    text: "Fintech, banca, logística y billeteras virtuales con miles de usuarios activos.",
+    icon: "shield",
+    title: "Banca & pagos digitales",
+    text: "Tokenización, Apple Pay, Google Pay y biometría en apps bancarias con miles de usuarios activos.",
   },
   {
-    icon: "shield",
-    title: "Seguridad y pagos digitales",
-    text: "Tokenización (Thales, Fiserv, Prisma), Apple Pay, Google Pay y autenticación biométrica.",
+    icon: "mobile",
+    title: "Billeteras digitales",
+    text: "Onboarding KYC, pagos, push notifications y lanzamiento multi-país en Centroamérica.",
   },
   {
     icon: "rocket",
     title: "Ciclo completo de producto",
-    text: "Desde el diseño funcional hasta el despliegue en tiendas con soporte en producción.",
+    text: "Desde integración de APIs de pagos hasta despliegue en tiendas con soporte en producción.",
   },
   {
     icon: "users",

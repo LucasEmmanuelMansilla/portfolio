@@ -21,9 +21,9 @@ export function SplashScreen() {
         >
           <span className="font-bebas text-3xl tracking-wider text-ios">LM</span>
         </m.div>
-        <p className="text-lg font-semibold text-ios">Portfolio</p>
-        <p className="text-muted text-sm mt-1 font-karla">Lucas Mansilla</p>
-        <m.div className="mt-8 w-24 h-1 rounded-full bg-white/10 mx-auto overflow-hidden">
+        <p className="text-base font-semibold text-ios">Portfolio</p>
+        <p className="mt-1 text-xs text-ios-label-secondary font-karla">Lucas Mansilla</p>
+        <m.div className="mt-8 w-24 h-1 rounded-full bg-ios-cell mx-auto overflow-hidden">
           <m.div
             className="h-full rounded-full bg-ios"
             initial={{ width: "0%" }}

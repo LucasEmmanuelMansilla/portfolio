@@ -47,7 +47,7 @@ export function ChatComposer({
   return (
     <form
       onSubmit={handleSubmit}
-      className="border-t border-border/50 p-3 bg-surface/95 shrink-0"
+      className="border-t border-ios-separator p-3 bg-ios-surface/95 shrink-0"
     >
       <div className="flex items-end gap-2">
         <textarea
@@ -60,14 +60,14 @@ export function ChatComposer({
           rows={1}
           disabled={disabled}
           aria-label="Mensaje para el asistente"
-          className="flex-1 resize-none rounded-2xl border border-border bg-surface-2 px-4 py-2.5 text-sm text-text placeholder:text-faint focus:outline-none focus:border-border disabled:opacity-50 max-h-[120px]"
+          className="max-h-[120px] flex-1 resize-none rounded-2xl border border-ios-separator bg-ios-grouped px-3.5 py-2 text-xs text-ios-label placeholder:text-ios-label-tertiary focus:border-ios/40 focus:outline-none disabled:opacity-50"
         />
         {isLoading ? (
           <button
             type="button"
             onClick={onStop}
             aria-label="Detener generación"
-            className="shrink-0 w-10 h-10 rounded-full border border-border text-muted hover:text-text flex items-center justify-center"
+            className="shrink-0 w-10 h-10 rounded-full border border-ios-separator text-ios-label-secondary active:bg-ios-label/[0.06] flex items-center justify-center"
           >
             <Square className="w-4 h-4" fill="currentColor" />
           </button>

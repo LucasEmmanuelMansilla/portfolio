@@ -1,7 +1,6 @@
 "use client";
 
 import { Briefcase, Home, MessageCircle, User } from "lucide-react";
-import { m } from "framer-motion";
 import { useAppNavStore } from "@/src/store/appNavStore";
 import type { AppTab } from "@/src/types/portfolio";
 import { cn } from "@/src/lib/cn";
@@ -13,10 +12,10 @@ interface TabItem {
 }
 
 const tabs: readonly TabItem[] = [
-  { id: "home", label: "Home", icon: Home },
-  { id: "projects", label: "Projects", icon: Briefcase },
-  { id: "about", label: "About", icon: User },
-  { id: "chat", label: "AI", icon: MessageCircle },
+  { id: "home", label: "Inicio", icon: Home },
+  { id: "projects", label: "Proyectos", icon: Briefcase },
+  { id: "about", label: "Perfil", icon: User },
+  { id: "chat", label: "Asistente", icon: MessageCircle },
 ];
 
 export function BottomTabBar() {
@@ -25,7 +24,7 @@ export function BottomTabBar() {
 
   return (
     <nav
-      className="z-10 shrink-0 border-t border-border/50 bg-surface/95 backdrop-blur-xl pt-1.5 pb-0.5 sm:pt-2 sm:pb-1"
+      className="z-10 shrink-0 border-t border-ios-separator bg-ios-grouped/95 backdrop-blur-xl pb-0.5 pt-1.5 shadow-[0_-1px_0_rgba(108,84,62,0.06)]"
       aria-label="Navegación principal"
     >
       <div className="flex items-stretch justify-around">
@@ -41,26 +40,19 @@ export function BottomTabBar() {
               aria-label={tab.label}
               aria-current={isActive ? "page" : undefined}
               className={cn(
-                "relative flex flex-col items-center justify-center gap-1 min-w-[44px] px-3 py-2 rounded-2xl transition-colors",
-                isActive ? "text-ios" : "text-muted hover:text-text"
+                "relative flex min-w-[44px] flex-col items-center justify-center gap-0.5 px-3 py-1.5 transition-colors",
+                isActive ? "text-ios" : "text-ios-label-secondary"
               )}
             >
-              {isActive && (
-                <m.div
-                  layoutId="tab-indicator"
-                  className="absolute inset-0 rounded-2xl bg-ios/12"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
               <Icon
                 className={cn(
-                  "w-[12px] h-[12px] relative z-10",
+                  "relative z-10 h-[20px] w-[20px]",
                   isActive && "stroke-[2.25]"
                 )}
               />
               <span
                 className={cn(
-                  "text-[8px] relative z-10 leading-none",
+                  "relative z-10 text-[9px] leading-none",
                   isActive && "font-semibold"
                 )}
               >

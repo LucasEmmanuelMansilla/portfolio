@@ -8,6 +8,19 @@ import type {
 
 export const skillGroups: readonly SkillGroup[] = [
   {
+    category: "Pagos & Seguridad",
+    items: [
+      "Apple Pay",
+      "Google Pay",
+      "Thales",
+      "Fiserv",
+      "Prisma",
+      "Face ID / Touch ID",
+      "Biometrics",
+      "Jumio (KYC)",
+    ],
+  },
+  {
     category: "Core Mobile",
     items: [
       "React Native",
@@ -24,19 +37,6 @@ export const skillGroups: readonly SkillGroup[] = [
   {
     category: "Web & Backend",
     items: ["React", "Next.js", "Node.js", "REST APIs", "Firebase", "GraphQL"],
-  },
-  {
-    category: "Pagos & Seguridad",
-    items: [
-      "Apple Pay",
-      "Google Pay",
-      "Thales",
-      "Fiserv",
-      "Prisma",
-      "Face ID / Touch ID",
-      "Biometrics",
-      "Jumio (KYC)",
-    ],
   },
   {
     category: "Analytics & Push",

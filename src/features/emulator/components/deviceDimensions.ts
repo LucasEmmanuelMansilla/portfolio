@@ -6,7 +6,7 @@ export const simulatorWindowSizeClass =
   "w-full max-w-[298px] [@media(max-height:800px)]:max-w-[283px] sm:max-w-[312px] md:max-w-[342px] lg:max-w-[366px] xl:max-w-[384px]";
 
 export const simulatorViewportClass =
-  "relative mx-auto aspect-[9/19.5] h-auto max-h-full w-full min-h-0 shrink overflow-hidden rounded-[12px] bg-black";
+  "relative mx-auto aspect-[9/19.5] h-auto max-h-full w-full min-h-0 shrink overflow-hidden rounded-[14px] bg-black ring-1 ring-black/80";
 
 /** @deprecated */
 export const SIMULATOR_MAX_WIDTH_PX = 384;

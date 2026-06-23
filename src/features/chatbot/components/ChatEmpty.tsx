@@ -12,8 +12,8 @@ const suggestions = [
 export function ChatEmpty({ onSuggestion, disabled }: ChatEmptyProps) {
   return (
     <div className="flex flex-col items-center justify-center h-full px-4 py-8 text-center">
-      <p className="text-sm text-muted mb-1">Asistente del portfolio</p>
-      <p className="text-xs text-faint mb-6 max-w-[240px]">
+      <p className="mb-1 text-xs text-ios-label-secondary">Asistente del portfolio</p>
+      <p className="mb-6 max-w-[240px] text-[11px] text-ios-label-tertiary">
         Preguntame sobre experiencia, proyectos, tecnologías y más.
       </p>
       <div className="flex flex-col gap-2 w-full max-w-[280px]">
@@ -23,7 +23,7 @@ export function ChatEmpty({ onSuggestion, disabled }: ChatEmptyProps) {
             type="button"
             disabled={disabled}
             onClick={() => onSuggestion(text)}
-            className="text-left text-xs px-3 py-2.5 rounded-xl border border-border bg-surface-2 text-muted hover:text-text hover:border-border transition-colors disabled:opacity-50"
+            className="rounded-xl border border-ios-separator bg-ios-grouped px-3 py-2 text-left text-[11px] text-ios-label-secondary transition-colors active:bg-ios-label/[0.06] disabled:opacity-50"
           >
             {text}
           </button>

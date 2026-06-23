@@ -8,6 +8,7 @@ interface AvatarProps {
   readonly src: string;
   readonly name: string;
   readonly size?: "sm" | "md" | "lg" | "xl";
+  readonly variant?: "default" | "ios";
   readonly className?: string;
 }
 
@@ -21,10 +22,12 @@ const sizeMap = {
 function AvatarInitials({
   name,
   size,
+  variant,
   className,
 }: {
   readonly name: string;
   readonly size: keyof typeof sizeMap;
+  readonly variant: "default" | "ios";
   readonly className?: string;
 }) {
   const initials = name
@@ -37,7 +40,10 @@ function AvatarInitials({
   return (
     <div
       className={cn(
-        "rounded-full bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30 flex items-center justify-center font-semibold text-accent shrink-0",
+        "flex shrink-0 items-center justify-center rounded-full font-semibold",
+        variant === "ios"
+          ? "border border-ios-separator/60 bg-ios-cell text-ios-label"
+          : "border border-accent/30 bg-gradient-to-br from-accent/20 to-accent/5 text-accent",
         sizeMap[size],
         className
       )}
@@ -48,17 +54,31 @@ function AvatarInitials({
   );
 }
 
-export function Avatar({ src, name, size = "md", className }: AvatarProps) {
+export function Avatar({
+  src,
+  name,
+  size = "md",
+  variant = "default",
+  className,
+}: AvatarProps) {
   const [hasError, setHasError] = useState(false);
 
   if (!src || hasError) {
-    return <AvatarInitials name={name} size={size} className={className} />;
+    return (
+      <AvatarInitials
+        name={name}
+        size={size}
+        variant={variant}
+        className={className}
+      />
+    );
   }
 
   return (
     <div
       className={cn(
-        "relative rounded-full overflow-hidden border border-border shrink-0",
+        "relative shrink-0 overflow-hidden rounded-full border",
+        variant === "ios" ? "border-ios-separator/60" : "border-border",
         sizeMap[size],
         className
       )}

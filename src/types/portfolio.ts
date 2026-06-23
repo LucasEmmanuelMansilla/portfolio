@@ -51,6 +51,7 @@ export interface Project {
   readonly impact: string;
   readonly technologies: readonly string[];
   readonly featured?: boolean;
+  readonly sector?: "fintech" | "enterprise" | "other";
 }
 
 export interface SkillGroup {

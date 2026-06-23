@@ -2,25 +2,25 @@ import type { Project } from "@/src/types/portfolio";
 
 export const projects: readonly Project[] = [
   {
-    id: "juntos-plus",
-    name: "Juntos+",
-    client: "Coca-Cola FEMSA",
+    id: "banco",
+    name: "BanCo",
+    client: "Banco de Corrientes",
     description:
-      "App B2B de pedidos y promociones para distribuidores. Integración de agente IA conversacional, carrusel de promociones y venta fraccionada por unidad y por caja.",
-    role: "Mobile Developer",
+      "App bancaria con tokenización de tarjetas, Apple Pay, Google Pay y autenticación biométrica nativa en dispositivos iOS y Android.",
+    role: "React Native Developer",
     impact:
-      "Agente IA en producción respondiendo consultas de clientes. Nuevas funcionalidades de venta alineadas al roadmap comercial.",
+      "Casi 100% de adopción biométrica. Pagos digitales nativos habilitados con Thales, Fiserv y Prisma.",
     technologies: [
       "React Native",
       "TypeScript",
-      "Zustand",
-      "TanStack Query",
-      "Segment",
-      "OneSignal",
-      "Jumio",
-      "Firebase",
+      "Thales",
+      "Fiserv",
+      "Prisma",
+      "Apple Pay",
+      "Google Pay",
     ],
     featured: true,
+    sector: "fintech",
   },
   {
     id: "pako-wallet",
@@ -41,26 +41,29 @@ export const projects: readonly Project[] = [
       "OneSignal",
     ],
     featured: true,
+    sector: "fintech",
   },
   {
-    id: "banco",
-    name: "BanCo",
-    client: "Banco de Corrientes",
+    id: "juntos-plus",
+    name: "Juntos+",
+    client: "Coca-Cola FEMSA",
     description:
-      "App bancaria con tokenización de tarjetas, Apple Pay, Google Pay y autenticación biométrica nativa en dispositivos iOS y Android.",
-    role: "React Native Developer",
+      "App B2B de pedidos y promociones para distribuidores. Integración de agente IA conversacional, carrusel de promociones y venta fraccionada por unidad y por caja.",
+    role: "Mobile Developer",
     impact:
-      "Casi 100% de adopción biométrica. Pagos digitales nativos habilitados con Thales, Fiserv y Prisma.",
+      "Agente IA en producción respondiendo consultas de clientes. Nuevas funcionalidades de venta alineadas al roadmap comercial.",
     technologies: [
       "React Native",
       "TypeScript",
-      "Thales",
-      "Fiserv",
-      "Prisma",
-      "Apple Pay",
-      "Google Pay",
+      "Zustand",
+      "TanStack Query",
+      "Segment",
+      "OneSignal",
+      "Jumio",
+      "Firebase",
     ],
     featured: true,
+    sector: "enterprise",
   },
   {
     id: "ypf-ruta",
@@ -78,6 +81,7 @@ export const projects: readonly Project[] = [
       "Redux",
       "REST APIs",
     ],
+    sector: "other",
   },
   {
     id: "playmatch",
@@ -95,6 +99,7 @@ export const projects: readonly Project[] = [
       "Google Maps",
       "Redux",
     ],
+    sector: "other",
   },
   {
     id: "masconet",
@@ -106,9 +111,18 @@ export const projects: readonly Project[] = [
     impact:
       "~50% de incremento en la tasa de mascotas recuperadas en áreas implementadas.",
     technologies: ["React Native", "Redux", "Node.js", "REST APIs"],
+    sector: "other",
   },
 ];
 
 export function getProjectById(id: string): Project | undefined {
   return projects.find((project) => project.id === id);
+}
+
+export function getFintechProjects(): readonly Project[] {
+  return projects.filter((project) => project.sector === "fintech");
+}
+
+export function getOtherProjects(): readonly Project[] {
+  return projects.filter((project) => project.sector !== "fintech");
 }
