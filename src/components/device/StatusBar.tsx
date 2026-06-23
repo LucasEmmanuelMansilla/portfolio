@@ -6,24 +6,23 @@ interface StatusBarProps {
   readonly light?: boolean;
 }
 
+const ISLAND_HEIGHT_PX = 28;
+const STATUS_ROW_TOP_PX = 13;
+
 function DynamicIsland() {
   return (
     <div
-      className="pointer-events-none absolute left-1/2 top-[7px] z-20 -translate-x-1/2"
+      className={cn(
+        "pointer-events-none relative h-[28px] w-[96px] rounded-full",
+        "bg-gradient-to-b from-[#1c1c1e] via-[#0a0a0a] to-black",
+        "shadow-[0_1px_2px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.05)]"
+      )}
       aria-hidden
     >
-      <div
-        className={cn(
-          "relative h-[30px] w-[102px] rounded-full",
-          "bg-gradient-to-b from-[#1c1c1e] via-[#0a0a0a] to-black",
-          "shadow-[0_1px_2px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.05)]"
-        )}
-      >
-        <div className="absolute inset-x-[10px] top-[4px] h-[3px] rounded-full bg-white/[0.04]" />
-        <div className="absolute right-[12px] top-1/2 flex -translate-y-1/2 items-center gap-[3px]">
-          <div className="h-[8px] w-[8px] rounded-full bg-[#0b0b0d] ring-1 ring-[#252528]" />
-          <div className="h-[5px] w-[5px] rounded-full bg-[#101012] opacity-80" />
-        </div>
+      <div className="absolute inset-x-[9px] top-[3px] h-[3px] rounded-full bg-white/[0.04]" />
+      <div className="absolute right-[11px] top-1/2 flex -translate-y-1/2 items-center gap-[3px]">
+        <div className="h-[7px] w-[7px] rounded-full bg-[#0b0b0d] ring-1 ring-[#252528]" />
+        <div className="h-[4px] w-[4px] rounded-full bg-[#101012] opacity-80" />
       </div>
     </div>
   );
@@ -98,19 +97,24 @@ export function StatusBar({ className, light = false }: StatusBarProps) {
   return (
     <div
       className={cn(
-        "relative h-[52px] w-full shrink-0 select-none bg-ios-surface",
+        "relative w-full shrink-0 select-none bg-ios-surface",
         foreground,
         className
       )}
+      style={{ height: `${STATUS_ROW_TOP_PX + ISLAND_HEIGHT_PX + 8}px` }}
       aria-hidden
     >
-      <DynamicIsland />
-
-      <div className="absolute inset-x-0 bottom-[7px] flex items-center justify-between px-[18px]">
+      <div
+        className="absolute inset-x-0 grid grid-cols-[1fr_auto_1fr] items-center px-[16px]"
+        style={{
+          top: `${STATUS_ROW_TOP_PX}px`,
+          height: `${ISLAND_HEIGHT_PX}px`,
+        }}
+      >
         <time
           dateTime="09:41"
           className={cn(
-            "font-[system-ui,-apple-system,BlinkMacSystemFont,'SF_Pro_Text','Segoe_UI',sans-serif]",
+            "justify-self-start font-[system-ui,-apple-system,BlinkMacSystemFont,'SF_Pro_Text','Segoe_UI',sans-serif]",
             "text-[13px] font-semibold leading-none tracking-[-0.02em] tabular-nums",
             !light && "text-[#1d1d1f]"
           )}
@@ -118,7 +122,9 @@ export function StatusBar({ className, light = false }: StatusBarProps) {
           9:41
         </time>
 
-        <div className="flex items-center gap-[5px]">
+        <DynamicIsland />
+
+        <div className="flex items-center justify-end gap-[4px] justify-self-end">
           <StatusCellular className={foreground} />
           <StatusWifi className={foreground} />
           <StatusBattery className={foreground} />
