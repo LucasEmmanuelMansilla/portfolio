@@ -7,7 +7,6 @@ import { BootScreen } from "@/src/features/boot/components/BootScreen";
 import { InstallingAppScreen } from "@/src/features/emulator/components/InstallingAppScreen";
 import { SplashScreen } from "@/src/features/portfolio/components/SplashScreen";
 import { PortfolioApp } from "@/src/features/portfolio/components/PortfolioApp";
-import { SkipBootButton } from "@/src/features/orchestrator/SkipBootButton";
 import { DevWorkstationLayout } from "@/src/features/workstation/components/DevWorkstationLayout";
 import { usePlatform } from "@/src/hooks/usePlatform";
 import { useExperienceStore } from "@/src/store/experienceStore";
@@ -83,7 +82,6 @@ export function ExperienceOrchestrator() {
   if (isMobile) {
     return (
       <>
-        <SkipBootButton />
         <MobileExperience />
       </>
     );
@@ -96,7 +94,6 @@ export function ExperienceOrchestrator() {
 
   return (
     <>
-      <SkipBootButton />
 
       <AnimatePresence>
         {state === "BOOTING" && (
