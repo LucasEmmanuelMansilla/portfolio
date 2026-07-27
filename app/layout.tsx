@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Karla } from "next/font/google";
+import { Bebas_Neue, Fira_Code, Karla } from "next/font/google";
 import { AppProviders } from "@/src/providers/AppProviders";
 import { getSiteUrl } from "@/src/lib/seo";
 import "./globals.css";
@@ -14,6 +14,12 @@ const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--font-fira-code",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 const siteUrl = getSiteUrl();
@@ -69,7 +75,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${bebasNeue.variable} ${karla.variable} h-full`}
+      className={`${bebasNeue.variable} ${karla.variable} ${firaCode.variable} h-full`}
     >
       <body className="min-h-full w-full overflow-x-hidden bg-bg text-text antialiased font-karla">
         <AppProviders>{children}</AppProviders>

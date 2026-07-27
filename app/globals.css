@@ -269,3 +269,25 @@ body {
   margin: 0.5em 0 0.25em;
   color: var(--color-text);
 }
+
+/* ─── VS Code simulator ───────────────────────────────────── */
+
+.vscode-shiki pre {
+  margin: 0;
+  padding: 12px 0;
+  background: transparent !important;
+  overflow-x: auto;
+  font-family: var(--font-fira-code), ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  tab-size: 2;
+}
+
+.vscode-shiki code {
+  font-family: inherit;
+  background: transparent !important;
+  display: block;
+  padding: 0 16px;
+  min-width: max-content;
+}
+

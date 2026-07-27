@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/generate-vscode-tree.ts",
+    "prebuild": "tsx scripts/generate-vscode-tree.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "ingest": "tsx scripts/ingest-pdf.ts"
+    "ingest": "tsx scripts/ingest-pdf.ts",
+    "vscode:tree": "tsx scripts/generate-vscode-tree.ts"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.0",
@@ -22,6 +25,7 @@
     "react-markdown": "^10.1.0",
     "rehype-highlight": "^7.0.2",
     "remark-gfm": "^4.0.1",
+    "shiki": "^4.3.1",
     "tailwind-merge": "^3.6.0",
     "zustand": "^5.0.14"
   },

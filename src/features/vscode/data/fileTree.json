@@ -1,0 +1,996 @@
+[
+  {
+    "name": "src",
+    "path": "src",
+    "type": "folder",
+    "children": [
+      {
+        "name": "components",
+        "path": "src/components",
+        "type": "folder",
+        "children": [
+          {
+            "name": "device",
+            "path": "src/components/device",
+            "type": "folder",
+            "children": [
+              {
+                "name": "HomeIndicator.tsx",
+                "path": "src/components/device/HomeIndicator.tsx",
+                "type": "file"
+              },
+              {
+                "name": "StatusBar.tsx",
+                "path": "src/components/device/StatusBar.tsx",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "layout",
+            "path": "src/components/layout",
+            "type": "folder",
+            "children": [
+              {
+                "name": "SafeArea.tsx",
+                "path": "src/components/layout/SafeArea.tsx",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "seo",
+            "path": "src/components/seo",
+            "type": "folder",
+            "children": [
+              {
+                "name": "SeoContent.tsx",
+                "path": "src/components/seo/SeoContent.tsx",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "ui",
+            "path": "src/components/ui",
+            "type": "folder",
+            "children": [
+              {
+                "name": "Avatar.tsx",
+                "path": "src/components/ui/Avatar.tsx",
+                "type": "file"
+              },
+              {
+                "name": "Badge.tsx",
+                "path": "src/components/ui/Badge.tsx",
+                "type": "file"
+              },
+              {
+                "name": "Card.tsx",
+                "path": "src/components/ui/Card.tsx",
+                "type": "file"
+              },
+              {
+                "name": "Sheet.tsx",
+                "path": "src/components/ui/Sheet.tsx",
+                "type": "file"
+              },
+              {
+                "name": "Tag.tsx",
+                "path": "src/components/ui/Tag.tsx",
+                "type": "file"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "data",
+        "path": "src/data",
+        "type": "folder",
+        "children": [
+          {
+            "name": "achievements.ts",
+            "path": "src/data/achievements.ts",
+            "type": "file"
+          },
+          {
+            "name": "contact.ts",
+            "path": "src/data/contact.ts",
+            "type": "file"
+          },
+          {
+            "name": "experience.ts",
+            "path": "src/data/experience.ts",
+            "type": "file"
+          },
+          {
+            "name": "profile.ts",
+            "path": "src/data/profile.ts",
+            "type": "file"
+          },
+          {
+            "name": "projects.ts",
+            "path": "src/data/projects.ts",
+            "type": "file"
+          },
+          {
+            "name": "stats.ts",
+            "path": "src/data/stats.ts",
+            "type": "file"
+          },
+          {
+            "name": "techStack.ts",
+            "path": "src/data/techStack.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "features",
+        "path": "src/features",
+        "type": "folder",
+        "children": [
+          {
+            "name": "boot",
+            "path": "src/features/boot",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/boot/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "BootScreen.tsx",
+                    "path": "src/features/boot/components/BootScreen.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "BrandIcons.tsx",
+                    "path": "src/features/boot/components/BrandIcons.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "DesktopBackdrop.tsx",
+                    "path": "src/features/boot/components/DesktopBackdrop.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MacDock.tsx",
+                    "path": "src/features/boot/components/MacDock.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MacOSDesktop.tsx",
+                    "path": "src/features/boot/components/MacOSDesktop.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "Wallpaper.tsx",
+                    "path": "src/features/boot/components/Wallpaper.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "data",
+                "path": "src/features/boot/data",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "bootSteps.ts",
+                    "path": "src/features/boot/data/bootSteps.ts",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "src/features/boot/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useBootSequence.ts",
+                    "path": "src/features/boot/hooks/useBootSequence.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "chatbot",
+            "path": "src/features/chatbot",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/chatbot/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "ChatComposer.tsx",
+                    "path": "src/features/chatbot/components/ChatComposer.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ChatEmpty.tsx",
+                    "path": "src/features/chatbot/components/ChatEmpty.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ChatFab.tsx",
+                    "path": "src/features/chatbot/components/ChatFab.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ChatHeader.tsx",
+                    "path": "src/features/chatbot/components/ChatHeader.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ChatScreen.tsx",
+                    "path": "src/features/chatbot/components/ChatScreen.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MessageBubble.tsx",
+                    "path": "src/features/chatbot/components/MessageBubble.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "TypingDots.tsx",
+                    "path": "src/features/chatbot/components/TypingDots.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "src/features/chatbot/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useChat.ts",
+                    "path": "src/features/chatbot/hooks/useChat.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "emulator",
+            "path": "src/features/emulator",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/emulator/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "DeviceBezel.tsx",
+                    "path": "src/features/emulator/components/DeviceBezel.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "deviceDimensions.ts",
+                    "path": "src/features/emulator/components/deviceDimensions.ts",
+                    "type": "file"
+                  },
+                  {
+                    "name": "EmulatorScene.tsx",
+                    "path": "src/features/emulator/components/EmulatorScene.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "EmulatorToolbar.tsx",
+                    "path": "src/features/emulator/components/EmulatorToolbar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "InstallingAppScreen.tsx",
+                    "path": "src/features/emulator/components/InstallingAppScreen.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "IOSSimulatorFrame.tsx",
+                    "path": "src/features/emulator/components/IOSSimulatorFrame.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SimulatorWindow.tsx",
+                    "path": "src/features/emulator/components/SimulatorWindow.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "src/features/emulator/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useEmulatorBoot.ts",
+                    "path": "src/features/emulator/hooks/useEmulatorBoot.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "experience",
+            "path": "src/features/experience",
+            "type": "folder",
+            "children": [
+              {
+                "name": "hooks",
+                "path": "src/features/experience/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useExperienceSequence.ts",
+                    "path": "src/features/experience/hooks/useExperienceSequence.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "orchestrator",
+            "path": "src/features/orchestrator",
+            "type": "folder",
+            "children": [
+              {
+                "name": "ExperienceOrchestrator.tsx",
+                "path": "src/features/orchestrator/ExperienceOrchestrator.tsx",
+                "type": "file"
+              },
+              {
+                "name": "SkipBootButton.tsx",
+                "path": "src/features/orchestrator/SkipBootButton.tsx",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "portfolio",
+            "path": "src/features/portfolio",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/portfolio/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "sections",
+                    "path": "src/features/portfolio/components/sections",
+                    "type": "folder",
+                    "children": [
+                      {
+                        "name": "ContactList.tsx",
+                        "path": "src/features/portfolio/components/sections/ContactList.tsx",
+                        "type": "file"
+                      },
+                      {
+                        "name": "ExperienceTimeline.tsx",
+                        "path": "src/features/portfolio/components/sections/ExperienceTimeline.tsx",
+                        "type": "file"
+                      },
+                      {
+                        "name": "TechSections.tsx",
+                        "path": "src/features/portfolio/components/sections/TechSections.tsx",
+                        "type": "file"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "AppHeader.tsx",
+                    "path": "src/features/portfolio/components/AppHeader.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "AppShell.tsx",
+                    "path": "src/features/portfolio/components/AppShell.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "BottomTabBar.tsx",
+                    "path": "src/features/portfolio/components/BottomTabBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "NativeList.tsx",
+                    "path": "src/features/portfolio/components/NativeList.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "PortfolioApp.tsx",
+                    "path": "src/features/portfolio/components/PortfolioApp.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ScreenTransition.tsx",
+                    "path": "src/features/portfolio/components/ScreenTransition.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "SplashScreen.tsx",
+                    "path": "src/features/portfolio/components/SplashScreen.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "screens",
+                "path": "src/features/portfolio/screens",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "AboutScreen.tsx",
+                    "path": "src/features/portfolio/screens/AboutScreen.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "HomeScreen.tsx",
+                    "path": "src/features/portfolio/screens/HomeScreen.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ProjectDetailSheet.tsx",
+                    "path": "src/features/portfolio/screens/ProjectDetailSheet.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "ProjectsScreen.tsx",
+                    "path": "src/features/portfolio/screens/ProjectsScreen.tsx",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "terminal",
+            "path": "src/features/terminal",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/terminal/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "BundleBar.tsx",
+                    "path": "src/features/terminal/components/BundleBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MacTerminal.tsx",
+                    "path": "src/features/terminal/components/MacTerminal.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MetroBundlerOutput.tsx",
+                    "path": "src/features/terminal/components/MetroBundlerOutput.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MetroLog.tsx",
+                    "path": "src/features/terminal/components/MetroLog.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MetroLogOutput.tsx",
+                    "path": "src/features/terminal/components/MetroLogOutput.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "MobileMetro.tsx",
+                    "path": "src/features/terminal/components/MobileMetro.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "TypingLine.tsx",
+                    "path": "src/features/terminal/components/TypingLine.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "data",
+                "path": "src/features/terminal/data",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "metroLogs.ts",
+                    "path": "src/features/terminal/data/metroLogs.ts",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "src/features/terminal/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useMetroLogEngine.ts",
+                    "path": "src/features/terminal/hooks/useMetroLogEngine.ts",
+                    "type": "file"
+                  },
+                  {
+                    "name": "useTypewriterLogs.ts",
+                    "path": "src/features/terminal/hooks/useTypewriterLogs.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "vscode",
+            "path": "src/features/vscode",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/vscode/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "VSCodeActivityBar.tsx",
+                    "path": "src/features/vscode/components/VSCodeActivityBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeEditor.tsx",
+                    "path": "src/features/vscode/components/VSCodeEditor.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeFileTree.tsx",
+                    "path": "src/features/vscode/components/VSCodeFileTree.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeSideBar.tsx",
+                    "path": "src/features/vscode/components/VSCodeSideBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeStatusBar.tsx",
+                    "path": "src/features/vscode/components/VSCodeStatusBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeTabBar.tsx",
+                    "path": "src/features/vscode/components/VSCodeTabBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeTitleBar.tsx",
+                    "path": "src/features/vscode/components/VSCodeTitleBar.tsx",
+                    "type": "file"
+                  },
+                  {
+                    "name": "VSCodeWindow.tsx",
+                    "path": "src/features/vscode/components/VSCodeWindow.tsx",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "data",
+                "path": "src/features/vscode/data",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "fileTree.json",
+                    "path": "src/features/vscode/data/fileTree.json",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "hooks",
+                "path": "src/features/vscode/hooks",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "useVSCodeFile.ts",
+                    "path": "src/features/vscode/hooks/useVSCodeFile.ts",
+                    "type": "file"
+                  },
+                  {
+                    "name": "useWindowDrag.ts",
+                    "path": "src/features/vscode/hooks/useWindowDrag.ts",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "lib",
+                "path": "src/features/vscode/lib",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "fileTree.ts",
+                    "path": "src/features/vscode/lib/fileTree.ts",
+                    "type": "file"
+                  },
+                  {
+                    "name": "highlightCode.ts",
+                    "path": "src/features/vscode/lib/highlightCode.ts",
+                    "type": "file"
+                  },
+                  {
+                    "name": "languageFromPath.ts",
+                    "path": "src/features/vscode/lib/languageFromPath.ts",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "store",
+                "path": "src/features/vscode/store",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "vscodeEditorStore.ts",
+                    "path": "src/features/vscode/store/vscodeEditorStore.ts",
+                    "type": "file"
+                  }
+                ]
+              },
+              {
+                "name": "types",
+                "path": "src/features/vscode/types",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "vscode.ts",
+                    "path": "src/features/vscode/types/vscode.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "workstation",
+            "path": "src/features/workstation",
+            "type": "folder",
+            "children": [
+              {
+                "name": "components",
+                "path": "src/features/workstation/components",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "DevWorkstationLayout.tsx",
+                    "path": "src/features/workstation/components/DevWorkstationLayout.tsx",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "hooks",
+        "path": "src/hooks",
+        "type": "folder",
+        "children": [
+          {
+            "name": "useClock.ts",
+            "path": "src/hooks/useClock.ts",
+            "type": "file"
+          },
+          {
+            "name": "useMediaQuery.ts",
+            "path": "src/hooks/useMediaQuery.ts",
+            "type": "file"
+          },
+          {
+            "name": "usePlatform.ts",
+            "path": "src/hooks/usePlatform.ts",
+            "type": "file"
+          },
+          {
+            "name": "useReducedMotionSafe.ts",
+            "path": "src/hooks/useReducedMotionSafe.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "lib",
+        "path": "src/lib",
+        "type": "folder",
+        "children": [
+          {
+            "name": "cn.ts",
+            "path": "src/lib/cn.ts",
+            "type": "file"
+          },
+          {
+            "name": "motion.ts",
+            "path": "src/lib/motion.ts",
+            "type": "file"
+          },
+          {
+            "name": "platform.ts",
+            "path": "src/lib/platform.ts",
+            "type": "file"
+          },
+          {
+            "name": "seo.ts",
+            "path": "src/lib/seo.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "providers",
+        "path": "src/providers",
+        "type": "folder",
+        "children": [
+          {
+            "name": "AppProviders.tsx",
+            "path": "src/providers/AppProviders.tsx",
+            "type": "file"
+          },
+          {
+            "name": "MotionProvider.tsx",
+            "path": "src/providers/MotionProvider.tsx",
+            "type": "file"
+          },
+          {
+            "name": "QueryProvider.tsx",
+            "path": "src/providers/QueryProvider.tsx",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "services",
+        "path": "src/services",
+        "type": "folder",
+        "children": [
+          {
+            "name": "queryClient.ts",
+            "path": "src/services/queryClient.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "store",
+        "path": "src/store",
+        "type": "folder",
+        "children": [
+          {
+            "name": "appNavStore.ts",
+            "path": "src/store/appNavStore.ts",
+            "type": "file"
+          },
+          {
+            "name": "bootStore.ts",
+            "path": "src/store/bootStore.ts",
+            "type": "file"
+          },
+          {
+            "name": "experienceStore.ts",
+            "path": "src/store/experienceStore.ts",
+            "type": "file"
+          },
+          {
+            "name": "vscodeWindowStore.ts",
+            "path": "src/store/vscodeWindowStore.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "types",
+        "path": "src/types",
+        "type": "folder",
+        "children": [
+          {
+            "name": "boot.ts",
+            "path": "src/types/boot.ts",
+            "type": "file"
+          },
+          {
+            "name": "experience.ts",
+            "path": "src/types/experience.ts",
+            "type": "file"
+          },
+          {
+            "name": "platform.ts",
+            "path": "src/types/platform.ts",
+            "type": "file"
+          },
+          {
+            "name": "portfolio.ts",
+            "path": "src/types/portfolio.ts",
+            "type": "file"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "app",
+    "path": "app",
+    "type": "folder",
+    "children": [
+      {
+        "name": "api",
+        "path": "app/api",
+        "type": "folder",
+        "children": [
+          {
+            "name": "chat",
+            "path": "app/api/chat",
+            "type": "folder",
+            "children": [
+              {
+                "name": "route.ts",
+                "path": "app/api/chat/route.ts",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "vscode",
+            "path": "app/api/vscode",
+            "type": "folder",
+            "children": [
+              {
+                "name": "file",
+                "path": "app/api/vscode/file",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "route.ts",
+                    "path": "app/api/vscode/file/route.ts",
+                    "type": "file"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "components",
+        "path": "app/components",
+        "type": "folder",
+        "children": [
+          {
+            "name": "chat",
+            "path": "app/components/chat",
+            "type": "folder",
+            "children": [
+              {
+                "name": "ChatEmpty.tsx",
+                "path": "app/components/chat/ChatEmpty.tsx",
+                "type": "file"
+              },
+              {
+                "name": "ChatInput.tsx",
+                "path": "app/components/chat/ChatInput.tsx",
+                "type": "file"
+              },
+              {
+                "name": "ChatMessage.tsx",
+                "path": "app/components/chat/ChatMessage.tsx",
+                "type": "file"
+              },
+              {
+                "name": "ChatPanel.tsx",
+                "path": "app/components/chat/ChatPanel.tsx",
+                "type": "file"
+              },
+              {
+                "name": "ChatWidget.tsx",
+                "path": "app/components/chat/ChatWidget.tsx",
+                "type": "file"
+              }
+            ]
+          },
+          {
+            "name": "About.tsx",
+            "path": "app/components/About.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Contact.tsx",
+            "path": "app/components/Contact.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Education.tsx",
+            "path": "app/components/Education.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Experience.tsx",
+            "path": "app/components/Experience.tsx",
+            "type": "file"
+          },
+          {
+            "name": "FeaturedTech.tsx",
+            "path": "app/components/FeaturedTech.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Hero.tsx",
+            "path": "app/components/Hero.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Nav.tsx",
+            "path": "app/components/Nav.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Skills.tsx",
+            "path": "app/components/Skills.tsx",
+            "type": "file"
+          },
+          {
+            "name": "Stats.tsx",
+            "path": "app/components/Stats.tsx",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "data",
+        "path": "app/data",
+        "type": "folder",
+        "children": [
+          {
+            "name": "featured-tech.ts",
+            "path": "app/data/featured-tech.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "globals.css",
+        "path": "app/globals.css",
+        "type": "file"
+      },
+      {
+        "name": "layout.tsx",
+        "path": "app/layout.tsx",
+        "type": "file"
+      },
+      {
+        "name": "page.tsx",
+        "path": "app/page.tsx",
+        "type": "file"
+      },
+      {
+        "name": "robots.ts",
+        "path": "app/robots.ts",
+        "type": "file"
+      },
+      {
+        "name": "sitemap.ts",
+        "path": "app/sitemap.ts",
+        "type": "file"
+      }
+    ]
+  }
+]
